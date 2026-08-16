@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- 谁让你看代码了😠 -->
-<!-- 可以学习我的代码，我没意见~ -->
+<!-- 你可以学习我的代码，我没意见~ -->
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -76,13 +76,14 @@
             border-bottom: 2px black solid;
             display: flex;
             justify-content: space-between;
+            animation: start02 1.8s;
         }
         .biao02{
             font-size: 30px;
         }
         @media (max-width: 768px) {
             .background01{width: 95%;}
-        } 
+        }
         .kapian:hover{
             transform: translateY(-3px);
             box-shadow: 0px 0px 15px grey;
@@ -91,13 +92,64 @@
             transform: translateY(4px);
             box-shadow: 0px 0px 3px grey;
         }
+        @keyframes start01 {
+            0%{
+                transform: translateY(-900px);
+            }
+            60%{
+                transform: translateY(30px);
+            }
+            100%{
+                transform: translateY(0px);
+            }
+        }
+        @keyframes start02{
+            0%{
+                border-bottom: 2px #f0f4f8 solid;
+                color: #f0f4f8;
+            }
+            50%{
+                border-bottom: 2px #f0f4f8 solid;
+                color: #f0f4f8;
+            }
+            100%{}
+        }
+        @keyframes start03{
+            0%{
+                transform: translateX(-900px);
+            }
+            50%{
+                transform: translateX(30px);
+            }
+            100%{}
+        }
+        @keyframes start04{
+            0%{
+                transform: translateX(900px);
+            }
+            50%{
+                transform: translateX(-30px);
+            }
+            100%{}
+        }
+        @keyframes start05{
+            0%{
+                transform: scale(0.1);
+            }
+            50%{
+                transform: scale(1.05);
+            }
+            100%{
+
+            }
+        }
 </style>
 </head>
 
 <body style="background-color: #f0f4f8;">
     <div class="background01">
-    <div class="hero"><p class="biao02" id="biao"></p><p class="biao02"><a href="en.html">英文/English</a></p></div>
-        <div class="kapian" style="margin-top: 15px;">
+    <div class="hero"><p class="biao02" id="biao">time</p><p class="biao02"><a href="en.html" style="animation: start02 1.6s;">英文/English</a></p></div>
+        <div class="kapian" style="margin-top: 15px;animation: start01 0.8s;">
             <img style="margin: 20px auto;height: 80px;width: 80px;;border-radius: 50%;" src="http://q.qlogo.cn/headimg_dl?dst_uin=3562668219&spec=640&img_type=jpg" alt="">
             <h1 style="text-align: center;font-size: 50px;margin-top: 0px;color: rgb(50, 97, 250);">BA3NDN</h1>
             <div class="kuang01">
@@ -109,12 +161,12 @@
             <h3 style="text-align: center;">你好！这里是BA3NDN，一个来自河北保定涞源的A证新手。</h3>
         </div>
         <div style="display: flex;">
-            <div class="kapian" style="width: 40%; padding: 20px;margin-right: 15%;">
+            <div class="kapian" style="width: 40%; padding: 20px;margin-right: 15%; animation: start03 0.8s;">
                 <h2 class="biaoti01">QSL卡片</h2>
                 <p class="duan01">目前仅使用实体QSL卡片，电子形式无法接收也无法寄送~</p>
                 <p class="duan01" style="text-align: center;font-size: 30px;color: rgb(50, 97, 250)"><b>电话：17732437545</b></p>
             </div>
-            <div class="kapian" style="width: 40%; padding: 20px;">
+            <div class="kapian" style="width: 40%; padding: 20px; animation: start04 0.8s;">
                 <h2 class="biaoti01">我的设备</h2>
                 <p class="duan01">电台：泉盛UV-K6</p>
                 <p class="duan01">天线：八木天线</p>
@@ -123,7 +175,7 @@
             </div>
 
         </div>
-        <div class="kapian">
+        <div class="kapian" style="animation: start05 1s;">
             <h2 class="biaoti01">其他</h2>
             <p class="duan01" style="text-align: center;">ITU:44……CQ:24……GRID:OM79II</p>
             <p class="duan01" style="text-align: center;">QQ:3562668219</p>
@@ -137,13 +189,14 @@
         </div>
         <h2 class="biaoti02">图片</h2>
         <div>
-            <h3 style="font-size: 25pa;">QSL卡片</h3>
+            <h3 style="font-size: 25px;">QSL卡片</h3>
             <img style="width: 45%;" src="QSL.jpg" alt="">
             <img style="width: 45%;margin-left: 9%" src="QSL2.jpg" alt="">
+            
         </div>
         <div>
-            <h3 style="font-size: 25px;">欢迎涞源、阜平、灵丘HAM加入交流群<a href="QQqun.jpg" target="_blank">点击打开图片</a></h3>
-            <img src="QQqun.jpg" style="width: 45%;">
+            <h2 style="font-size: 25px;">欢迎涞源、阜平、灵丘HAM加入交流群！<a href="QQqun.jpg" target="_blank">点击打开图片</a></h2>
+            <img src="QQqun.jpg" alt="" style="width: 45%;">
         </div>
         <h2 class="biaoti02" style="font-size: 70px;">73!</h2>
     </div>
