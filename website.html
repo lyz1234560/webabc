@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>website</title>
+    <style>
+        .chuangkou{
+            margin: auto;
+            width: 600px;
+            height: 900px;
+            background-color: rgb(243, 189, 189);
+            border-radius: 30px;
+            box-shadow: 0px 0px 30px black;
+            padding: 20px;
+/*             display: flex;
+            flex-direction: column;
+            align-items: center; */
+        }
+        .denglu{
+            font-size: 50px;
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        .username{
+            font-size: 20px;
+            text-align: left;
+            margin: 5px;
+            margin-left: 10px;
+        }
+        .shuru01{
+            width: 90%;
+            height: 50px;
+            border-radius: 20px;
+            border: 3px rgb(235, 72, 72) solid;
+            font-size: 30px;
+            padding-left: 15px;
+            margin-left: 10px;
+            transition: all 0.5s;
+        }
+        .jinru{
+            width: 150px;
+            height: 70px;
+            border-radius: 20px;
+            border: 2px rgb(255, 94, 94) solid;
+            background-color: rgb(252, 154, 154);
+            font-size: 30px;
+            margin: 70px;
+            transition: all 0.2s;
+        }
+        .btn003{
+            min-height: none; 
+            width: 100%; 
+            display: flex; 
+            justify-content: center;
+        }
+        .jinru:hover{
+            text-align: center;
+            box-shadow: 0px 0px 10px black;
+            transform: scale(1.05);
+        }
+        .a01{
+            margin-top: 100px;
+        }
+        @media (max-width:768px){
+            .chuangkou{
+                width: 80%;
+                height: 160%
+            }
+            .btn003{
+                flex-direction: column;
+                margin: 50px;
+                
+            }
+            .jinru{
+                margin: 20px;
+            }
+            .a01{
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body style="background-image: linear-gradient(to right,rgb(250, 78, 106),rgb(253, 204, 212),rgb(250, 78, 106))">
+    <div class="chuangkou">
+        <h1 class="denglu">请登录</h1>
+        <p class="username">用户名</p>
+        <input type="text" class="shuru01">
+        <p class="username a01" >密码</p>
+        <input type="password" name="" id="password" class="shuru01" style="font-size: 20px;">
+        <div class="btn003">
+            <button class="jinru" id="btn01">进入</button>
+            <button id="zhuce" class="jinru">立即注册</button>
+        </div>
+        
+    </div>
+</body>
+<script>
+    var password = document.getElementById("password")
+    var btn01 = document.getElementById("btn01")
+    var btno2 = document.getElementById("zhuce")
+    btn01.onclick = function(){
+        if(password.value == "q!scf@t1357"){
+            window.open("https://www.bilibili.com/video/BV1GJ411x7h7/?spm_id_from=333.337.search-card.all.click","_self");
+        }else{
+            alert("用户名或密码错误")
+        }
+    }
+    btno2.onclick = function(){alert("由于技术原因，注册功能暂时关闭，感谢理解。")}
+</script>
+</html>
