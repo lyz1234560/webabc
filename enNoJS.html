@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!-- Why do you see my code😠 -->
+ <!-- You can learn my code,I agree~ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BA3NDN</title>
+    <style>
+        .background01{
+            width: 75%;
+            margin: 0 auto;
+            background-color: #f0f4f8;
+            min-height: 100px;
+            margin-top: -10px;
+        }
+        .kapian{
+            background-color: white;
+            width: 100%;
+            border-radius: 20px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0px 0px 10px gray;
+            transition: all 0.1s;
+        }
+        .kuang02{
+            background-color: rgb(162, 209, 247);
+            border: 1px rgb(50, 97, 250) solid;
+            border-radius: 10px;
+            margin-left: 10px;
+            padding: 5px;
+        }
+        .kuang01{
+            display: flex;
+            justify-content: center;
+        }
+        .duan01{
+            font-size: 25px;
+            margin-bottom: 0px;
+        }
+        .biaoti01{
+            text-align: center;
+            color: rgb(50, 97, 250);
+            margin: 0px;
+            font-size: 40px;
+        }
+        .biaoti02{
+            color: rgb(50, 97, 250);
+            font-size: 50px;
+        }
+        .aboutme01{
+            background-color: white;
+            border-left: 3px rgb(50, 97, 250) solid;
+        }
+        .aboutme02{
+            font-size: 30px;
+            margin-left: 20px;
+        }
+        .picture:hover{
+            transform: translateX(-400px) scale(5);
+        }
+        .dibu{
+            background-color: #0D47A1;
+            width: 100vw;
+            height: 200px;
+            text-align: center;
+            padding: 30px;
+            margin: 0px;
+        }
+        .hero{
+            margin: 0 auto;
+            padding: 0px;
+            width: 100%;
+            height: 100px;
+            border-bottom: 2px black solid;
+            display: flex;
+            justify-content: space-between;
+        }
+        .biao02{
+            font-size: 30px;
+        }
+        /* 小优化：手机适配保留 */
+        @media (max-width: 768px) {
+            .background01 { width: 95%; }
+            /* .kuang01 { flex-wrap: wrap; }
+            .kuang02 { margin: 5px; }
+            .aboutme02 { font-size: 20px; }
+            .duan01 { font-size: 20px; } */
+        }
+        .kapian:hover{
+            transform: translateY(-3px);
+            box-shadow: 0px 0px 15px grey;
+        }
+        .kapian:active{
+            transform: translateY(4px);
+            box-shadow: 0px 0px 3px grey;
+        }
+        @keyframes start01 {
+            0%{
+                transform: translateY(-900px);
+            }
+            60%{
+                transform: translateY(30px);
+            }
+            100%{
+                transform: translateY(0px);
+            }
+        }
+        @keyframes start02{
+            0%{
+                border-bottom: 2px #f0f4f8 solid;
+                color: #f0f4f8;
+            }
+            50%{
+                border-bottom: 2px #f0f4f8 solid;
+                color: #f0f4f8;
+            }
+            100%{}
+        }
+        @keyframes start03{
+            0%{
+                transform: translateX(-900px);
+            }
+            50%{
+                transform: translateX(10px);
+            }
+            100%{}
+        }
+        @keyframes start04{
+            0%{
+                transform: translateX(900px);
+            }
+            50%{
+                transform: translateX(-10px);
+            }
+            100%{}
+        }
+        @keyframes start05{
+            0%{
+                transform: scale(0.1);
+            }
+            50%{
+                transform: scale(1.05);
+            }
+            100%{
+
+            }
+        }
+    </style>
+</head>
+<body style="background-color: #f0f4f8;">
+    <div class="background01">
+        <div class="hero" id="change02" style="animation: start02 1.6s;">
+            <p class="biao02" id="biao"></p>
+            <p class="biao02"><a href="zh-cnNoJS.html" style="animation: start02 1.6s;">中文 / Chinese</a></p> <!-- 链接回中文版 -->
+        </div>
+
+        <!-- 头像与标题 -->
+        <div id="change01" class="kapian" style="margin-top: 15px; animation: start01 0.8s;">
+            <img style="margin: 20px auto;height: 80px;width: 80px;border-radius: 50%;" src="http://q.qlogo.cn/headimg_dl?dst_uin=3562668219&spec=640&img_type=jpg" alt="BA3NDN">
+            <h1 style="text-align: center;font-size: 50px;margin-top: 0px;color: rgb(50, 97, 250);">BA3NDN</h1>
+            <div class="kuang01">
+                <div class="kuang02">High School Student</div>
+                <div class="kuang02">Aviation Enthusiast</div>
+                <div class="kuang02">Thanks for your QSL card!</div>
+                <div class="kuang02">Welcome to Hebei!😋</div>
+            </div>
+            <h3 style="text-align: center;">Hello! This is BA3NDN, a newbie with Class A license from Laiyuan, Baoding, Hebei.</h3>
+        </div>
+
+        <!-- 双栏卡片 -->
+        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+            <div id="change03" class="kapian" style="flex: 1; min-width: 250px; padding: 20px; animation: start03 0.8s;">
+                <h2 class="biaoti01">QSL Cards</h2>
+                <p class="duan01">Currently only physical QSL cards are accepted – no electronic format.</p>
+                <p class="duan01" style="text-align: center;font-size: 30px;color: rgb(50, 97, 250);"><b>Phone: 17732437545</b></p>
+            </div>
+            <div id="change04" class="kapian" style="flex: 1; min-width: 250px; padding: 20px; animation: start04 0.8s;">
+                <h2 class="biaoti01">My Equipment</h2>
+                <p class="duan01">Radio: Quansheng UV-K6</p>
+                <p class="duan01">Antenna: Yagi antenna</p>
+                <p class="duan01">Common repeater: None…</p>
+                <p class="duan01">Frequency: 438.500 MHz</p>
+            </div>
+        </div>
+
+        <!-- 其他信息 -->
+        <div id="change05" class="kapian" style="animation: start05 0.8s;">
+            <h2 class="biaoti01">Other Info</h2>
+            <p class="duan01" style="text-align: center;">ITU:44… CQ:24… GRID:OM79II</p>
+            <p class="duan01" style="text-align: center;">QQ: 3562668219</p>
+            <p class="duan01" style="text-align: center;margin-bottom: 20px;">Email: 3562668219@qq.com</p>
+        </div>
+
+        <!-- 关于我 -->
+        <h2 class="biaoti02">About Me</h2>
+        <div class="aboutme01">
+            <p class="aboutme02">
+                <img class="picture" style="width: 20%;float: right;transition: all 0.5s;border-radius: 20px;border: 2px #0D47A1 solid;margin-left: 60px;" src="laiyuan.png" alt="Laiyuan">
+                Most of Baoding is plain, which is great for radio. However, I live in Laiyuan County – the highest average altitude in Baoding – and the county seat is a mountain basin. There are 12 amateur repeaters in Baoding, but Laiyuan doesn't have one. The nearest one is in Yuxian, Zhangjiakou, 50 km away.
+                <i style="color: rgb(166, 168, 168);">(Hover over the image)</i>
+            </p>
+            <p class="aboutme02">
+                Because of this, I got my license at the beginning of summer but haven't made any contacts by the end of summer. I tried many methods, like building a Yagi antenna, but its unstable performance tortured me… I wanted to work satellites, but the terrifying speed of the big guys on the satellites made me lose courage to transmit (and my 771 antenna can't reach them anyway).
+            </p>
+            <p class="aboutme02">
+                I'm learning <b>satellite communication</b>, so if you contact me, it will likely be via amateur satellite.
+            </p>
+        </div>
+
+        <!-- 图片 -->
+        <h2 class="biaoti02">Photos</h2>
+        <img style="width: 45%;" src="QSL.jpg" alt="QSL card">
+        <img style="width: 45%;margin-left: 9%" src="QSL2.jpg" alt="QSL card back">
+
+        <!-- 73 -->
+        <h2 class="biaoti02" style="font-size: 70px;">73!</h2>
+    </div>
+
+    <!-- 底部 -->
+    <div class="dibu">
+        <p style="color: white;">This page is translated from Chinese by Deepseek||英文版本由Deepseek翻译</p>
+        <p style="color: white;">© 2026 BA3NDN</p>
+        <p style="color: white;">
+            <a class="lianjie" href="https://www.bilibili.com/video/BV1GJ411x7h7/?spm_id_from=333.337.search-card.all.click&vd_source=58eec5a663550f49c7a9a0cb745340d6" target="_blank" style="color: grey;">冀ICB备1145141919810号</a>
+            [This number doesn't actually exist (doge)]
+        </p>
+    </div>
+</body>
+</html>
