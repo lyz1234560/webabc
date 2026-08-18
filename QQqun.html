@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QQqun</title>
+    <style>
+        @keyframes start{
+            0%{
+                transform: translateX(-2000px);
+            }
+            50%{
+                transform: translateX(30px);
+            }
+            100%{
+                transform: translateX(0px);
+            }
+        }
+        @keyframes start02{
+            100%{
+
+            }
+            50%{
+                transform: translateY(20px);
+            }
+            30%{
+                transform: translateY(-300px);
+            }
+            0%{
+                transform: translateY(-300px);
+            }
+        }
+        #btn01{
+            position: fixed;
+            left: 30px;
+            width: 100px;
+            height: 70px;
+            border: 4px rgb(73, 112, 243) solid;
+            background-color: rgb(143, 184, 219);
+            border-radius: 20px;
+            font-size: 30px;
+            
+        }
+        @keyframes change01{
+            100%{
+                transform: translateX(-2000px);
+            }
+            30%{
+                transform: translateX(30px);
+            }
+            0%{
+                transform: translateX(0px);
+            }
+        }
+        @keyframes change02{
+            0%{background-color: black;}
+            30%{background-color: black;}
+            100%{background-color: #f0f4f8;}
+        }
+        @keyframes change03{
+            0%{
+
+            }
+            10%{
+                transform: translateY(15px);
+            }
+            100%{
+                transform: translateY(-300px);
+            }
+        }
+        #btn01{
+            position: fixed;
+            cursor: pointer;
+            animation: start02 1.5s;
+            color: #f0f4f8;
+            transition: all 0.3s;
+        }
+        #btn01:hover{
+            box-shadow: 0px 0px 20px rgb(174, 238, 243);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body id="body" style="background-color: black;display: flex;justify-content: center;">
+    <img id="img" src="QQqun.jpg" alt="" style="height: 100vh;margin-left: 1000px;margin-right: 1000px;animation: start 0.8s;">
+    <button id="btn01">返回</button>
+</body>
+<script>
+    var btn01 = document.getElementById("btn01")
+    var body = document.getElementById("body")
+    var img = document.getElementById("img")
+    btn01.onclick = function(){
+        body.style.animation = "change02 1.2s forwards"
+        img.style.animation = "change01 1.2s forwards"
+        btn01.style.animation = "change03 1.2s forwards"
+        setTimeout(function(){
+            window.open("zh-cn.html","_self")
+        },1300)
+    }
+</script>
+</html>

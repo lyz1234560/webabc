@@ -147,7 +147,7 @@
             100%{
                 transform: translateY(-900px);
             }
-            40%{
+            20%{
                 transform: translateY(30px);
             }
             0%{
@@ -169,7 +169,7 @@
             100%{
                 transform: translateX(-1100px);
             }
-            50%{
+            20%{
                 transform: translateX(15px);
             }
             0%{}
@@ -178,7 +178,7 @@
             100%{
                 transform: translateX(1100px);
             }
-            50%{
+            20%{
                 transform: translateX(-15px);
             }
             0%{}
@@ -187,7 +187,7 @@
             100%{
                 transform: scale(0.1);
             }
-            50%{
+            20%{
                 transform: scale(1.05);
             }
             0%{
@@ -199,12 +199,35 @@
         }
         #english:hover{
             color: #0D47A1;
+            
+        }
+        #OpenPicture{
+            cursor: pointer;
+        }
+        @keyframes picture01{
+            0%{
+                
+            }
+            50%{
+                transform: translateX(-30px);
+            }
+            100%{
+                transform: translateX(2000px);
+                background-color: black;
+            }
+        }
+        @keyframes picture02{
+            0%{}
+            50%{}
+            100%{
+                background-color: black;
+            }
         }
 </style>
 </head>
 
-<body style="background-color: #f0f4f8;">
-    <div class="background01">
+<body style="background-color: #f0f4f8;width: 100%;" id="background02">
+    <div class="background01" id="background01">
     <div class="hero" id="change02"><p class="biao02" id="biao">time</p><p class="biao02" id="english" style="animation: start02 1.6s;">英文/English</p></div>
         <div class="kapian" style="margin-top: 15px;animation: start01 0.8s;" id="change01">
             <img style="margin: 20px auto;height: 80px;width: 80px;;border-radius: 50%;" src="http://q.qlogo.cn/headimg_dl?dst_uin=3562668219&spec=640&img_type=jpg" alt="">
@@ -252,12 +275,12 @@
             
         </div>
         <div>
-            <h2 style="font-size: 25px;">欢迎涞源、阜平、灵丘HAM加入交流群！<a href="QQqun.jpg" target="_blank">点击打开图片</a></h2>
+            <h2 style="font-size: 25px;">欢迎涞源、阜平、灵丘HAM加入交流群！<a target="_blank" id="OpenPicture" style="color: rgb(92, 92, 253);">点击打开图片</a></h2>
             <img src="QQqun.jpg" alt="" style="width: 45%;">
         </div>
         <h2 class="biaoti02" style="font-size: 70px;">73!</h2>
     </div>
-    <div class="dibu">
+    <div class="dibu" id="background03">
         <p style="color: white;">©2026 BA3NDN</p>
         <p style="color: white;"><a class="lianjie" href="https://www.bilibili.com/video/BV1GJ411x7h7/?spm_id_from=333.337.search-card.all.click&vd_source=58eec5a663550f49c7a9a0cb745340d6" target="_blank" style="color: grey;">冀ICB备1145141919810号</a>[根本没有这个号(doge)]</p>
     </div>
@@ -273,6 +296,11 @@
     var change04 = document.getElementById("change04")
     var change05 = document.getElementById("change05")
     var english = document.getElementById("english")
+    var OpenPicture = document.getElementById("OpenPicture")
+    var background01 = document.getElementById("background01")
+    var background02 = document.getElementById("background02")
+    var background03 = document.getElementById("background03")
+
     function time01() {
     minute = new Date().getMinutes()
     second = new Date().getSeconds()
@@ -291,16 +319,24 @@
     time01()
     setInterval(time01,500)
     english.onclick = function(){
-        change01.style.animation = "change01 1.2s forwards"
-        change02.style.animation = "change02 1.2s forwards"
-        change03.style.animation = "change03 1.2s forwards"
-        change04.style.animation = "change04 1.2s forwards"
-        change05.style.animation = "change05 1.2s forwards"
+        change01.style.animation = "change01 1.2s"
+        change02.style.animation = "change02 1.2s"
+        change03.style.animation = "change03 1.2s"
+        change04.style.animation = "change04 1.2s"
+        change05.style.animation = "change05 1.2s"
 
         setTimeout(function(){
             window.open("en.html","_self")
         },1100)
 
+    }
+    OpenPicture.onclick = function(){
+        background01.style.animation = "picture01 0.8s forwards"
+        background02.style.animation = "picture02 0.8s forwards"
+        background03.style.animation = "picture01 0.8s forwards"
+        setTimeout(function(){
+            window.open("QQqun.html","_self")
+        },850)
     }
 </script>
 </html>
